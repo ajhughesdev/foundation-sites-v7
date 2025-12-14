@@ -1,0 +1,19 @@
+{
+  "name": "@foundation/core",
+  "version": "7.0.0-alpha.0",
+  "description": "Foundation 7 core runtime (DOM-first, ESM-first).",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}

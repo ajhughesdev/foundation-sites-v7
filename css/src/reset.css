@@ -1,0 +1,34 @@
+/*
+  Minimal reset for Foundation 7 (draft).
+  Keep this small: apps can bring their own stronger reset if desired.
+*/
+
+html {
+    text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-inline-size: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}

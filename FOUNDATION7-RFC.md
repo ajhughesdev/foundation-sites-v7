@@ -69,5 +69,5 @@ The first package (`core`) uses `tsc` to emit `dist/` as a minimal baseline; we 
 
 1. Ship a stable `@foundation/core` API surface (init/destroy/use + plugin contracts).
 2. Introduce one rewritten component (likely Reveal) to validate lifecycle/events/a11y.
-3. Establish CSS tokens + cascade layers and a minimal base stylesheet.
+3. Establish CSS tokens + cascade layers and a minimal base stylesheet (initial work in `css/`).
 4. Replace legacy tests with a modern browser/a11y harness (Playwright + axe).

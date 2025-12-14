@@ -1,0 +1,25 @@
+/*
+  Reveal (draft)
+
+  Works best with <dialog>. The JS plugin can also mount on non-dialog elements,
+  but those rely on inline styles for now.
+*/
+
+dialog[data-reveal] {
+    border: 0;
+    padding: var(--f-reveal-padding);
+    border-radius: var(--f-reveal-radius);
+    background: var(--f-color-surface-elevated);
+    color: var(--f-color-text);
+    box-shadow: var(--f-reveal-shadow);
+
+    inline-size: min(var(--f-reveal-width), calc(100vw - (2 * var(--f-space-4))));
+}
+
+dialog[data-reveal]::backdrop {
+    background: var(--f-color-backdrop);
+}
+
+dialog[data-reveal]> :where(h1, h2, h3) {
+    margin-block-start: 0;
+}

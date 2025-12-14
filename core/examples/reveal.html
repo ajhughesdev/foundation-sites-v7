@@ -1,47 +1,33 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Foundation 7 — Reveal (Draft)</title>
+    <link rel="stylesheet" href="../../css/src/foundation.css" />
     <style>
-      body {
-        font-family: system-ui, sans-serif;
-        padding: 24px;
-      }
-
-      dialog[data-reveal] {
-        padding: 20px;
-        border: 0;
-        border-radius: 12px;
-        width: min(520px, calc(100vw - 32px));
-      }
-
-      dialog[data-reveal]::backdrop {
-        background: rgba(0, 0, 0, 0.5);
-      }
+        body {
+            padding: 24px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>Reveal (Draft)</h1>
-    <p>
-      Build first: <code>yarn f7:core:build</code>, then open this file in a browser.
-    </p>
-
+    <p> Build first: <code>yarn f7:core:build</code>, then open this file in a browser. </p>
     <button data-reveal-open="demo-dialog">Open dialog</button>
-
     <dialog id="demo-dialog" data-reveal>
-      <h2>Hi</h2>
-      <p>This is a draft Foundation 7 Reveal using <code>&lt;dialog&gt;</code>.</p>
-      <p><button data-reveal-close>Close</button></p>
+        <h2>Hi</h2>
+        <p>This is a draft Foundation 7 Reveal using <code>&lt;dialog&gt;</code>.</p>
+        <p><button data-reveal-close>Close</button></p>
     </dialog>
-
     <script type="module">
-      import { createFoundation, reveal } from "../dist/index.js";
+        import { createFoundation, reveal } from "../dist/index.js";
 
-      const app = createFoundation({ plugins: [reveal()] });
-      app.init(document);
+        const app = createFoundation({ plugins: [reveal()] });
+        app.init(document);
     </script>
-  </body>
-</html>
+</body>
 
+</html>

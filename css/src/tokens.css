@@ -1,0 +1,68 @@
+/*
+  Foundation 7 design tokens (draft).
+  Prefer semantic tokens; keep raw “palette” values minimal and stable.
+*/
+
+:root {
+    /* Typography */
+    --f-font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        "Apple Color Emoji", "Segoe UI Emoji";
+    --f-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --f-font-size-1: 0.875rem;
+    --f-font-size-2: 1rem;
+    --f-font-size-3: 1.125rem;
+
+    --f-line-height-1: 1.25;
+    --f-line-height-2: 1.5;
+
+    /* Spacing */
+    --f-space-1: 0.25rem;
+    --f-space-2: 0.5rem;
+    --f-space-3: 0.75rem;
+    --f-space-4: 1rem;
+    --f-space-5: 1.5rem;
+    --f-space-6: 2rem;
+
+    /* Radii */
+    --f-radius-1: 0.25rem;
+    --f-radius-2: 0.5rem;
+    --f-radius-3: 0.75rem;
+
+    /* Shadows */
+    --f-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.08);
+    --f-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.18);
+
+    /* Z-index scale */
+    --f-z-overlay: 1000;
+    --f-z-dialog: 1010;
+
+    /* Core palette (compat with existing Foundation defaults) */
+    --f-color-primary: #1779ba;
+    --f-color-secondary: #767676;
+    --f-color-success: #3adb76;
+    --f-color-warning: #ffae00;
+    --f-color-danger: #cc4b37;
+
+    /* Surfaces */
+    --f-color-surface: #ffffff;
+    --f-color-surface-elevated: #ffffff;
+    --f-color-backdrop: rgba(0, 0, 0, 0.5);
+
+    /* Text */
+    --f-color-text: #111827;
+    --f-color-text-muted: #4b5563;
+
+    /* Borders */
+    --f-color-border: rgba(17, 24, 39, 0.18);
+
+    /* Focus */
+    --f-focus-ring-color: color-mix(in srgb, var(--f-color-primary), transparent 55%);
+    --f-focus-ring-width: 3px;
+
+    /* Reveal */
+    --f-reveal-width: 32.5rem;
+    --f-reveal-padding: var(--f-space-5);
+    --f-reveal-radius: var(--f-radius-3);
+    --f-reveal-shadow: var(--f-shadow-2);
+}

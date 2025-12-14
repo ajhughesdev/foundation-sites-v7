@@ -1,0 +1,40 @@
+/*
+  Base styles for Foundation 7 (draft).
+  Keep global styles minimal and predictable.
+*/
+
+:where(html) {
+    font-family: var(--f-font-sans);
+    color: var(--f-color-text);
+    background: var(--f-color-surface);
+}
+
+:where(body) {
+    font-size: var(--f-font-size-2);
+    line-height: var(--f-line-height-2);
+}
+
+:where(a) {
+    color: var(--f-color-primary);
+}
+
+:where(code, pre) {
+    font-family: var(--f-font-mono);
+}
+
+:where(:focus-visible) {
+    outline: var(--f-focus-ring-width) solid var(--f-focus-ring-color);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    :where(*),
+    :where(*::before),
+    :where(*::after) {
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

@@ -11,7 +11,7 @@ This is the initial Foundation 7 core runtime scaffold.
 ## Usage (draft)
 
 ```js
-import { createFoundation, definePlugin } from '@foundation/core';
+import { createFoundation, definePlugin, reveal } from '@foundation/core';
 
 const disclosure = definePlugin({
   name: 'disclosure',
@@ -21,7 +21,24 @@ const disclosure = definePlugin({
   }
 });
 
-const app = createFoundation({ plugins: [disclosure] });
+const app = createFoundation({ plugins: [disclosure, reveal()] });
 app.init(document);
 ```
 
+### Reveal (draft)
+
+Markup:
+
+```html
+<button data-reveal-open="my-dialog">Open</button>
+<dialog id="my-dialog" data-reveal>
+  <p>Hello</p>
+  <button data-reveal-close>Close</button>
+</dialog>
+```
+
+Programmatic control:
+
+```js
+document.getElementById('my-dialog')?.dispatchEvent(new CustomEvent('foundation:reveal:open', { bubbles: true }));
+```

@@ -39,6 +39,10 @@ Foundation 7 core is intentionally small and explicit:
 
 See `core/src/` for the initial implementation scaffold.
 
+### First ported component (draft)
+
+- Reveal (modal/dialog) lives in `core/src/plugins/reveal.ts` as the first end-to-end component port. Once the component API stabilizes, it should move to its own package (e.g. `reveal/`).
+
 ## Breaking changes (high level)
 
 - No global `window.Foundation`.
